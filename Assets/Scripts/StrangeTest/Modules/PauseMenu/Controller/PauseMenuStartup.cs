@@ -9,7 +9,7 @@ namespace StrangeTest.Modules.PauseMenu
 		{
 			Debug.Log("PauseMenuStartup called!");
 
-			//TODO: Needs an implementation?
+			//TODO: Transition In?
 		}
 	}
 }

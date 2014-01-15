@@ -12,6 +12,10 @@ namespace StrangeTest.Modules.PauseMenu
 		public override void Execute ()
 		{
 			Debug.Log("ResumeGame called!");
+
+			//TODO: Animate out before destroying?
+
+			Object.Destroy(ContextView);
 		}
 	}
 }
