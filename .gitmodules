@@ -1,0 +1,3 @@
+[submodule "Assets/Scripts/Libs/strange"]
+	path = Assets/Scripts/Libs/strange
+	url = https://github.com/thirdmotion/strange-core.git
