@@ -14,7 +14,7 @@ namespace StrangeTest.Common
 		public override void Launch ()
 		{
 			base.Launch ();
-			StartSignal startSignal = (StartSignal)injectionBinder.GetInstance<StartSignal>();
+			StartSignal startSignal = injectionBinder.GetInstance<StartSignal>();
 			startSignal.Dispatch();
 		}
 
@@ -28,7 +28,7 @@ namespace StrangeTest.Common
 		protected override void mapBindings ()
 		{
 			base.mapBindings ();
-			injectionBinder.Bind<StartSignal>().To<StartSignal>().ToSingleton();
+			implicitBinder.ScanForAnnotatedClasses (new string[]{"StrangeTest"});
 		}
 	}
 }

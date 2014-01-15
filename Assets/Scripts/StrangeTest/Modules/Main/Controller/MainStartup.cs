@@ -1,15 +1,13 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using strange.extensions.command.impl;
+using UnityEngine;
 
-public class MainStartup : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+namespace StrangeTest.Modules.Main.Controller
+{
+	public class MainStartup : Command
+	{
+		override public void Execute()
+		{
+			Debug.Log("Main Startup Called.");
+		}
 	}
 }

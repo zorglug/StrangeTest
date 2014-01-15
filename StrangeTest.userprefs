@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StrangeTest\Common\Config\SignalContext.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StrangeTest\Modules\Main\MainContext.cs">
     <Files>
-      <File FileName="Assets\Scripts\StrangeTest\Common\Config\SignalContext.cs" Line="33" Column="3" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\Main\Controller\MainStartup.cs" Line="10" Column="35" />
       <File FileName="Assets\Scripts\StrangeTest\Common\Config\CommonSignal.cs" Line="6" Column="2" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\Main\MainContext.cs" Line="27" Column="1" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\Main\Controller\MainStartup.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\Main\MainContext.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\Main\MainRoot.cs" Line="7" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
