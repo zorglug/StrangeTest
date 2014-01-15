@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Libs\strange\extensions\context\impl\MVCSContext.cs">
+    <Files>
+      <File FileName="Assets\Scripts\StrangeTest\Common\Config\SignalContext.cs" Line="8" Column="38" />
+      <File FileName="Assets\Scripts\StrangeTest\Common\Config\CommonSignal.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\Main\MainContext.cs" Line="3" Column="19" />
+      <File FileName="Assets\Scripts\Libs\strange\extensions\context\impl\MVCSContext.cs" Line="176" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
