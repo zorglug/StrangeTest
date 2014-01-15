@@ -35,8 +35,9 @@ namespace StrangeTest.Common
 
 			if (Context.firstContext == this)
 			{
-				//TODO: Map cross context stuff here.
+				//Map cross context stuff here.
 
+				#region Navigation
 				injectionBinder.Bind<NewGameSignal>().ToSingleton().CrossContext();
 				injectionBinder.Bind<LoadGameSignal>().ToSingleton().CrossContext();
 				injectionBinder.Bind<QuitGameSignal>().ToSingleton().CrossContext();
@@ -44,6 +45,13 @@ namespace StrangeTest.Common
 				commandBinder.Bind<NewGameSignal>().To<NewGame>();
 				commandBinder.Bind<LoadGameSignal>().To<LoadGame>();
 				commandBinder.Bind<QuitGameSignal>().To<QuitGame>();
+				#endregion
+
+				#region Load Game
+				injectionBinder.Bind<SaveGameSignal>().ToSingleton().CrossContext();
+
+				commandBinder.Bind<SaveGameSignal>().To<SaveGame>();
+				#endregion
 			}
 		}
 	}

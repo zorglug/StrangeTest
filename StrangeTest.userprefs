@@ -1,15 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StrangeTest\Common\Model\Levels.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StrangeTest\Modules\PauseMenu\View\PauseMenuView.cs">
     <Files>
-      <File FileName="Assets\Scripts\StrangeTest\Common\Model\Levels.cs" Line="10" Column="1" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\Main\Controller\MainStartup.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\StrangeTest\Modules\Main\MainContext.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuRoot.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\StrangeTest\Modules\Main\MainRoot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuContext.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuView.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuMediator.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuContext.cs" Line="20" Column="4" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuView.cs" Line="31" Column="4" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuMediator.cs" Line="43" Column="4" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\PauseMenu\PauseMenuRoot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\PauseMenu\PauseMenuContext.cs" Line="19" Column="72" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\PauseMenu\View\PauseMenuView.cs" Line="17" Column="51" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\PauseMenu\View\PauseMenuMediator.cs" Line="44" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

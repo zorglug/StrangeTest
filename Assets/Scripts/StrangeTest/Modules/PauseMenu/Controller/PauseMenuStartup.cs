@@ -1,15 +1,15 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using strange.extensions.command.impl;
+using UnityEngine;
 
-public class PauseMenuStartup : MonoBehaviour {
+namespace StrangeTest.Modules.PauseMenu
+{
+	public class PauseMenuStartup : Command
+	{
+		public override void Execute ()
+		{
+			Debug.Log("PauseMenuStartup called!");
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+			//TODO: Needs an implementation?
+		}
 	}
 }

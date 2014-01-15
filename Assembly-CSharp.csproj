@@ -158,14 +158,16 @@
      <Compile Include="Assets\Scripts\Libs\strange\framework\impl\BinderException.cs" />
      <Compile Include="Assets\Scripts\Libs\strange\framework\impl\Binding.cs" />
      <Compile Include="Assets\Scripts\Libs\strange\framework\impl\SemiBinding.cs" />
-     <Compile Include="Assets\Scripts\StrangeTest\Common\Config\CommonSignal.cs" />
-     <Compile Include="Assets\Scripts\StrangeTest\Common\Config\NavigationSignals.cs" />
-     <Compile Include="Assets\Scripts\StrangeTest\Common\Config\StrangeTestModuleContext.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Common\CommonSignals.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Common\Controller\LoadGame.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Common\Controller\NewGame.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Common\Controller\QuitGame.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Common\Controller\SaveGame.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Common\Model\InputeName.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Common\Model\Levels.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Common\Model\Tags.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Common\NavigationSignals.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Common\StrangeTestModuleContext.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Modules\Game\Controller\GameStartup.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Modules\Game\GameContext.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Modules\Game\GameRoot.cs" />
@@ -178,8 +180,13 @@
      <Compile Include="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuMediator.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuView.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Modules\PauseMenu\Controller\PauseMenuStartup.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Modules\PauseMenu\Controller\ResumeGame.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Modules\PauseMenu\Controller\ReturnToMainMenu.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Modules\PauseMenu\PauseMenuContext.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Modules\PauseMenu\PauseMenuRoot.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Modules\PauseMenu\PauseMenuSignals.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Modules\PauseMenu\View\PauseMenuMediator.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Modules\PauseMenu\View\PauseMenuView.cs" />
      <None Include="Assets\Scripts\Libs\strange\extensions\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

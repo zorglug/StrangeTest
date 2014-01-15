@@ -13,11 +13,6 @@ namespace StrangeTest.Modules.MainMenu
 		protected override void mapBindings ()
 		{
 			base.mapBindings ();
-			
-			if (Context.firstContext == this)
-			{
-				//TODO: Specific mappings to run this module in isolation.
-			}
 
 			commandBinder.Bind<StartSignal>().To<MainMenuStartup>().Once();
 

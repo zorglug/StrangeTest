@@ -1,15 +1,24 @@
 ﻿using UnityEngine;
-using System.Collections;
+using StrangeTest.Common;
 
-public class PauseMenuContext : MonoBehaviour {
+namespace StrangeTest.Modules.PauseMenu
+{
+	public class PauseMenuContext : StrangeTestModuleContext
+	{
+		public PauseMenuContext (MonoBehaviour contextView) : base (contextView)
+		{
+		}
+		
+		protected override void mapBindings ()
+		{
+			base.mapBindings ();
+			
+			commandBinder.Bind<StartSignal>().To<PauseMenuStartup>().Once();
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+			commandBinder.Bind<ResumeGameSignal>().To<ResumeGame>();
+			commandBinder.Bind<ReturnToMainMenuSignal>().To<ReturnToMainMenu>();
+			
+			mediationBinder.Bind<PauseMenuView>().To<PauseMenuMediator>();
+		}
 	}
 }

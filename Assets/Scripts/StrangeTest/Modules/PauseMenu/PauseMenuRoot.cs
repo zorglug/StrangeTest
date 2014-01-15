@@ -1,15 +1,12 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using strange.extensions.context.impl;
 
-public class PauseMenuRoot : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+namespace StrangeTest.Modules.PauseMenu
+{
+	public class PauseMenuRoot : ContextView
+	{
+		void Awake()
+		{
+			context = new PauseMenuContext(this);
+		}
 	}
 }

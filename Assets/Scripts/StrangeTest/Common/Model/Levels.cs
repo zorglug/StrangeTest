@@ -4,6 +4,7 @@ namespace StrangeTest.Common
 	{
 		public const string MAIN_MENU 	= "MainMenu";
 		public const string GAME 		= "Game";
+		public const string PAUSE_MENU 	= "PauseMenu";
 	}
 }
 
