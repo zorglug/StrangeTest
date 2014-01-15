@@ -160,9 +160,17 @@
      <Compile Include="Assets\Scripts\Libs\strange\framework\impl\SemiBinding.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Common\Config\CommonSignal.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Common\Config\SignalContext.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Common\Levels.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Common\Tags.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Modules\Main\Controller\MainStartup.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Modules\Main\MainContext.cs" />
      <Compile Include="Assets\Scripts\StrangeTest\Modules\Main\MainRoot.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Modules\MainMenu\Controller\MainMenuStartup.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuContext.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuRoot.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuSignal.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuMediator.cs" />
+     <Compile Include="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuView.cs" />
      <None Include="Assets\Scripts\Libs\strange\extensions\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

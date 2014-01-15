@@ -4,8 +4,9 @@ namespace StrangeTest.Modules.Main
 {
 	public class MainRoot : ContextView
 	{
-		void Start()
+		void Awake()
 		{
+			DontDestroyOnLoad(gameObject);
 			context = new MainContext(this);
 		}
 	}

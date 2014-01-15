@@ -1,7 +1,6 @@
 ﻿using strange.extensions.context.impl;
 using StrangeTest.Common;
 using UnityEngine;
-using StrangeTest.Modules.Main.Controller;
 
 
 namespace StrangeTest.Modules.Main
@@ -21,7 +20,7 @@ namespace StrangeTest.Modules.Main
 				//TODO: Map cross context stuff here.
 			}
 
-			commandBinder.Bind<StartSignal>().To<MainStartup>();
+			commandBinder.Bind<StartSignal>().To<MainStartup>().Once();
 		}
 	}
 }

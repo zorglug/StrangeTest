@@ -1,0 +1,5 @@
+namespace StrangeTest.Modules.MainMenu
+{
+
+}
+
