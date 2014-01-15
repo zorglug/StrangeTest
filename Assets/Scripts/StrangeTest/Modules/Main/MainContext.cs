@@ -5,7 +5,10 @@ using UnityEngine;
 
 namespace StrangeTest.Modules.Main
 {
-	public class MainContext : SignalContext
+	/**
+	 * MainContext is the root of all contexts. It never gets unloaded.
+	 */
+	public class MainContext : StrangeTestModuleContext
 	{
 		public MainContext (MonoBehaviour contextView) : base (contextView)
 		{
@@ -14,11 +17,6 @@ namespace StrangeTest.Modules.Main
 		protected override void mapBindings ()
 		{
 			base.mapBindings ();
-
-			if (Context.firstContext == this)
-			{
-				//TODO: Map cross context stuff here.
-			}
 
 			commandBinder.Bind<StartSignal>().To<MainStartup>().Once();
 		}

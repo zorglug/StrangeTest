@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace StrangeTest.Modules.MainMenu
 {
-	public class MainMenuContext : SignalContext
+	public class MainMenuContext : StrangeTestModuleContext
 	{
 		public MainMenuContext (MonoBehaviour contextView) : base (contextView)
 		{

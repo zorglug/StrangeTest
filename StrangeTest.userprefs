@@ -1,17 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuContext.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuMediator.cs">
     <Files>
       <File FileName="Assets\Scripts\StrangeTest\Modules\Main\Controller\MainStartup.cs" Line="7" Column="26" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\Main\MainContext.cs" Line="4" Column="1" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuRoot.cs" Line="2" Column="1" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\Main\MainRoot.cs" Line="8" Column="4" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuContext.cs" Line="22" Column="66" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuView.cs" Line="29" Column="1" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuSignal.cs" Line="6" Column="1" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuMediator.cs" Line="37" Column="1" />
-      <File FileName="Assets\Scripts\StrangeTest\Common\Config\SignalContext.cs" Line="28" Column="41" />
-      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\Controller\MainMenuStartup.cs" Line="14" Column="73" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\Main\MainContext.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuRoot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\Main\MainRoot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\MainMenuContext.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuView.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StrangeTest\Modules\MainMenu\View\MainMenuMediator.cs" Line="40" Column="31" />
+      <File FileName="Assets\Scripts\StrangeTest\Common\Config\StrangeTestModuleContext.cs" Line="39" Column="73" />
+      <File FileName="Assets\Scripts\StrangeTest\Common\Controller\NewGame.cs" Line="8" Column="3" />
+      <File FileName="Assets\Scripts\StrangeTest\Common\Controller\LoadGame.cs" Line="9" Column="41" />
+      <File FileName="Assets\Scripts\StrangeTest\Common\Controller\QuitGame.cs" Line="10" Column="42" />
+      <File FileName="Assets\Scripts\StrangeTest\Common\Config\NavigationSignals.cs" Line="6" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

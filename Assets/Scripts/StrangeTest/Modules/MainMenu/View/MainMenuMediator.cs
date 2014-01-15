@@ -1,35 +1,45 @@
 using strange.extensions.mediation.impl;
 using UnityEngine;
+using StrangeTest.Common;
 
 namespace StrangeTest.Modules.MainMenu
 {
 	public class MainMenuMediator : Mediator
 	{
 		[Inject]
-		public MainMenuView View { get; set; }
+		public MainMenuView view { get; set; }
+
+		[Inject]
+		public NewGameSignal newGameSignal { get; set; }
+
+		[Inject]
+		public LoadGameSignal loadGameSignal { get; set; }
+
+		[Inject]
+		public QuitGameSignal quitGameSignal { get; set; }
 
 		public override void OnRegister ()
 		{
 			base.OnRegister ();
 
-			View.NewPressed.AddListener(OnNewPressed);
-			View.LoadPressed.AddListener(OnLoadPressed);
-			View.QuitPressed.AddListener(OnQuitPressed);
+			view.NewPressed.AddListener(OnNewPressed);
+			view.LoadPressed.AddListener(OnLoadPressed);
+			view.QuitPressed.AddListener(OnQuitPressed);
 		}
 
 		private void OnNewPressed()
 		{
-			Debug.Log("MainMenuMediator.OnNewPressed");
+			newGameSignal.Dispatch();
 		}
 
 		private void OnLoadPressed()
 		{
-			Debug.Log("MainMenuMediator.OnLoadPressed");
+			loadGameSignal.Dispatch("Default");
 		}
 
 		private void OnQuitPressed()
 		{
-			Debug.Log("MainMenuMediator.OnQuitPressed");
+			quitGameSignal.Dispatch();
 		}
 	}
 }
