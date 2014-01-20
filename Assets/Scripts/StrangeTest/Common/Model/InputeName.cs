@@ -2,7 +2,7 @@ namespace StrangeTest.Common
 {
 	public class InputeName
 	{
-		public const string CANCEL = "Cancel";
+		public const string PAUSE = "Pause";
 	}
 }
 

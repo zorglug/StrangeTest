@@ -35,7 +35,7 @@ namespace StrangeTest.Modules.PauseMenu
 
 		void Update()
 		{
-			if (Input.GetButtonDown(InputeName.CANCEL))
+			if (Input.GetButtonDown(InputeName.PAUSE))
 			{
 				ResumePressed.Dispatch();
 			}
