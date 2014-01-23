@@ -1,2 +1,5 @@
 Temp/
-Library/metadata/
+Library/
+*.csproj
+*.sln
+*.userprefs
