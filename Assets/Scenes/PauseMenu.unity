@@ -187,7 +187,7 @@ GameObject:
   - 114: {fileID: 1326216035}
   m_Layer: 0
   m_Name: PauseMenuRoot
-  m_TagString: Untagged
+  m_TagString: PauseMenuContext
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
