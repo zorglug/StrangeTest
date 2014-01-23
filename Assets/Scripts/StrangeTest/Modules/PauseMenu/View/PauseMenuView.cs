@@ -10,24 +10,35 @@ namespace StrangeTest.Modules.PauseMenu
 		public Signal ResumePressed = new Signal();
 		public Signal SavePressed 	= new Signal();
 		public Signal LeavePressed 	= new Signal();
-		
+
+		private Camera _camera;
+		public Camera pauseCam
+		{
+			get { return _camera; }
+			set
+			{
+				_camera = value;
+				InitCamValues();
+			}
+		}
+
+		Vector3 _screenCorner = Vector3.zero;
+
 		void OnGUI ()
 		{
-			//TODO: Center GUI...
-
-			GUI.Box(new Rect(10,10,100,130), "Pause Menu");
+			GUI.Box(new Rect(_screenCorner.x + 10, _screenCorner.y + 10, 100, 130), "Pause Menu");
 			
-			if (GUI.Button(new Rect(20,40,80,20), "RESUME GAME"))
+			if (GUI.Button(new Rect(_screenCorner.x + 20, _screenCorner.y + 40, 80, 20), "RESUME GAME"))
 			{
 				ResumePressed.Dispatch();
 			}
 			
-			if (GUI.Button(new Rect(20,70,80,20), "SAVE GAME"))
+			if (GUI.Button(new Rect(_screenCorner.x + 20, _screenCorner.y + 70, 80, 20), "SAVE GAME"))
 			{
 				SavePressed.Dispatch();
 			}
 			
-			if (GUI.Button(new Rect(20,100,80,20), "LEAVE GAME"))
+			if (GUI.Button(new Rect(_screenCorner.x + 20, _screenCorner.y + 100, 80, 20), "LEAVE GAME"))
 			{
 				LeavePressed.Dispatch();
 			}
@@ -39,6 +50,11 @@ namespace StrangeTest.Modules.PauseMenu
 			{
 				ResumePressed.Dispatch();
 			}
+		}
+
+		private void InitCamValues()
+		{
+			_screenCorner = _camera.ViewportToScreenPoint(Vector3.zero);
 		}
 	}
 }

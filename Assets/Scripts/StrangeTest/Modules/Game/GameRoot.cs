@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
-
-public class GameRoot : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+using strange.extensions.context.impl;
+namespace StrangeTest.Modules.Game
+{
+	public class GameRoot : ContextView
+	{
+		void Awake()
+		{
+			context = new GameContext(this);
+		}
 	}
 }

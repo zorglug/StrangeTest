@@ -7,7 +7,7 @@ namespace StrangeTest.Common
 	{
 		public override void Execute ()
 		{
-			Debug.Log("NewGame command called!");
+			Application.LoadLevel(Levels.GAME);
 		}
 	}
 }

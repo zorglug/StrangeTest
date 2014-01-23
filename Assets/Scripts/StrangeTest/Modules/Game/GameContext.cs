@@ -1,15 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
+using StrangeTest.Common;
 
-public class GameContext : MonoBehaviour {
+namespace StrangeTest.Modules.Game
+{
+	public class GameContext : StrangeTestModuleContext
+	{
+		public GameContext (MonoBehaviour contextView) : base (contextView)
+		{
+		}
+		
+		protected override void mapBindings ()
+		{
+			base.mapBindings ();
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+			injectionBinder.Bind<Camera>().To(CameraUtils.GetCameraByName(CameraNames.GAME_CAMERA)).ToName(CameraNames.GAME_CAMERA);
+			
+			commandBinder.Bind<StartSignal>().To<GameStartup>().Once();
+			commandBinder.Bind<ShowPauseMenuSignal>().To<ShowPauseMenu>();
+
+			mediationBinder.Bind<GameContainerView>().To<GameContainerMediator>();
+			mediationBinder.Bind<HexGridView>().To<HexGridMediator>();
+		}
 	}
 }

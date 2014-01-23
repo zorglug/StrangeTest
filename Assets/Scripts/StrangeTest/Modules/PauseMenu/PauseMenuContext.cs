@@ -12,6 +12,8 @@ namespace StrangeTest.Modules.PauseMenu
 		protected override void mapBindings ()
 		{
 			base.mapBindings ();
+
+			injectionBinder.Bind<Camera>().To(CameraUtils.GetCameraByName(CameraNames.PAUSE_MENU_CAMERA)).ToName(CameraNames.PAUSE_MENU_CAMERA);
 			
 			commandBinder.Bind<StartSignal>().To<PauseMenuStartup>().Once();
 

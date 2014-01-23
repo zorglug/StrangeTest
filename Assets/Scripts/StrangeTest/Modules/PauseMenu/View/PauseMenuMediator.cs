@@ -1,5 +1,6 @@
 ﻿using strange.extensions.mediation.impl;
 using StrangeTest.Common;
+using UnityEngine;
 
 namespace StrangeTest.Modules.PauseMenu
 {
@@ -16,10 +17,15 @@ namespace StrangeTest.Modules.PauseMenu
 		
 		[Inject]
 		public ReturnToMainMenuSignal returnToMainMenuSignal { get; set; }
+
+		[Inject (CameraNames.PAUSE_MENU_CAMERA)]
+		public Camera pauseCam { get; set; }
 		
 		public override void OnRegister ()
 		{
 			base.OnRegister ();
+
+			view.pauseCam = pauseCam;
 			
 			view.ResumePressed.AddListener(OnResumePressed);
 			view.SavePressed.AddListener(OnSavePressed);
