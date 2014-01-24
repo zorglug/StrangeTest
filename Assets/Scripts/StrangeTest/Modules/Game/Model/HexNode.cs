@@ -10,19 +10,17 @@ namespace StrangeTest.Modules.Game
 		public List<HexNode> Neighbours = null;
 		public Hexagon view = null;
 
-		public HexNode()
-		{
-		}
-
 		public HexNode(Vector3 coordinates)
 		{
-			Coordinates = coordinates;
-		}
+			// :: WARNING:: Key-matchaing a 0-length vector against another 0-length
+			//              vector does not work unless matching against Vector3.zero.
+			//				Any explanation appreciated!
+			if (coordinates == Vector3.zero)
+			{
+				return;
+			}
 
-		public HexNode(Vector3 coordinates, List<HexNode> neighbours)
-		{
 			Coordinates = coordinates;
-			Neighbours = neighbours;
 		}
 	}
 }
