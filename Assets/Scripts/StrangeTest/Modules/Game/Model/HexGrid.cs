@@ -18,7 +18,6 @@ namespace StrangeTest.Modules.Game
 		public HexGridType Type { get { return _type; } }
 
 		private IHexCoordinatesConverter _coordConverter;
-		private IHexNodeLinker _linker;
 
 		private List<HexNode> _nodes;
 		private Dictionary<Vector3, HexNode> _nodeLookup;
@@ -68,25 +67,21 @@ namespace StrangeTest.Modules.Game
 				case HexGridType.EvenQ:
 				{
 					_coordConverter = new EvenQConverter();
-					_linker = new EvenQLinker();
 					break;
 				}
 				case HexGridType.EvenR:
 				{
 					_coordConverter = new EvenRConverter();
-					_linker = new EvenRLinker();
 					break;
 				}
 				case HexGridType.OddQ:
 				{
 					_coordConverter = new OddQConverter();
-					_linker = new OddQLinker();
 					break;
 				}
 				case HexGridType.OddR:
 				{
 					_coordConverter = new OddRConverter();
-					_linker = new OddRLinker();
 					break;
 				}
 			}
@@ -94,20 +89,49 @@ namespace StrangeTest.Modules.Game
 
 		void ConstructGrid()
 		{
-			HexNode node;
+			CreateNodes();
+			LinkNodes();
+		}
 
+		void CreateNodes()
+		{
+			HexNode node;
+			
 			for (int y = 0; y < _height; ++y)
 			{
 				for (int x = 0; x < _width; ++x)
 				{
 					node = new HexNode(_coordConverter.OffsetToCube(new Vector2(x, y)));
-
+					
 					_nodes.Add(node);
 					_nodeLookup.Add(node.Coordinates, node);
 				}
 			}
+		}
 
-			_linker.Link(_nodes, this);
+		void LinkNodes()
+		{
+			List<Vector3> neighbourOffsets = new List<Vector3>
+			{
+				new Vector3(0, 1, -1), new Vector3(1, 0, -1), new Vector3(1, -1, 0),
+				new Vector3(0, -1, 1), new Vector3(-1, 0, 1), new Vector3(-1, 1, 0)
+			};
+
+			List<HexNode> neighbours;
+			Vector3 offset;
+
+			foreach (HexNode node in _nodes)
+			{
+				neighbours = new List<HexNode>(6);
+
+				for (int i = 0; i < 6; ++i)
+				{
+					offset = neighbourOffsets[i];
+					neighbours.Add(GetHexNodeAtCoordinates(node.Coordinates.x + offset.x, node.Coordinates.y + offset.y, node.Coordinates.z + offset.z));
+				}
+
+				node.Neighbours = neighbours;
+			}
 		}
 	}
 }
