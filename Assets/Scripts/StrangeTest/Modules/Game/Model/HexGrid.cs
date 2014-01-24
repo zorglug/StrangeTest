@@ -17,10 +17,14 @@ namespace StrangeTest.Modules.Game
 		private HexGridType _type;
 		public HexGridType Type { get { return _type; } }
 
-		private IHexCoordinatesConverter _coordConverter;
-
 		private List<HexNode> _nodes;
+		public List<HexNode> Nodes
+		{
+			get { return _nodes; }
+		}
+
 		private Dictionary<Vector3, HexNode> _nodeLookup;
+		private IHexCoordinatesConverter _coordConverter;
 
 		public HexGrid(int width, int height)
 		{

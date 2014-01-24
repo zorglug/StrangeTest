@@ -14,6 +14,8 @@ namespace StrangeTest.Modules.Game
 		{
 			base.mapBindings ();
 
+			injectionBinder.Bind<IGameModel>().To<GameModel>().ToSingleton();
+
 			injectionBinder.Bind<Camera>().To(CameraUtils.GetCameraByName(CameraNames.GAME_CAMERA)).ToName(CameraNames.GAME_CAMERA);
 			
 			commandBinder.Bind<StartSignal>().To<GameStartup>().Once();
