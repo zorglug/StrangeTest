@@ -20,6 +20,8 @@ namespace StrangeTest.Modules.Game
 			
 			commandBinder.Bind<StartSignal>().To<GameStartup>().Once();
 			commandBinder.Bind<ShowPauseMenuSignal>().To<ShowPauseMenu>();
+			commandBinder.Bind<ClearAllHighlightsSignal>().To<ClearAllHighlights>().Pooled();
+			commandBinder.Bind<HighlightNeighboursSignal>().To<HighlightNeighbours>().Pooled();
 
 			mediationBinder.Bind<GameContainerView>().To<GameContainerMediator>();
 			mediationBinder.Bind<HexGridView>().To<HexGridMediator>();

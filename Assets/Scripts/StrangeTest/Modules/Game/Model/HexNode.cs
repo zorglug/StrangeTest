@@ -8,7 +8,7 @@ namespace StrangeTest.Modules.Game
 	{
 		public Vector3 Coordinates = Vector3.zero;
 		public List<HexNode> Neighbours = null;
-		public Hexagon value = null;
+		public Hexagon view = null;
 
 		public HexNode()
 		{

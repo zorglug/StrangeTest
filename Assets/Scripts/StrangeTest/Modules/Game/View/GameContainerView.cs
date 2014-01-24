@@ -10,11 +10,18 @@ namespace StrangeTest.Modules.Game
 	{
 		public Signal PausePressed = new Signal();
 
+		public Signal RandomNodePressed = new Signal();
+
 		void Update()
 		{
 			if (Input.GetButtonDown(InputeName.PAUSE))
 			{
 				PausePressed.Dispatch();
+			}
+
+			if (Input.GetKeyDown(KeyCode.F15))
+			{
+				RandomNodePressed.Dispatch();
 			}
 		}
 	}

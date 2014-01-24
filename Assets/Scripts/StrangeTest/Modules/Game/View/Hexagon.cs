@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using strange.extensions.signal.impl;
 
 namespace StrangeTest.Modules.Game
 {
 	public class Hexagon : MonoBehaviour
 	{
-		private static Color Color1 = new Color(1f, 0f, 0f);
-		private static Color Color2 = new Color(0f, 1f, 0f);
-		private static Color Color3 = new Color(0f, 0f, 1f);
+		public Signal<Vector3> HexagonSelected = new Signal<Vector3>();
 
 		public Vector2 PixelDimensions;
 		public SpriteRenderer spriteRenderer;
@@ -16,9 +15,22 @@ namespace StrangeTest.Modules.Game
 		[HideInInspector]
 		public Vector3 coords = new Vector3();
 
+		private Color _color;
+
 		void Start ()
 		{
-			SetRandomColor ();
+			SetRandomColor();
+			LowLight();
+		}
+
+		public void HighLight()
+		{
+			spriteRenderer.color = Color.white;
+		}
+
+		public void LowLight()
+		{
+			spriteRenderer.color = _color;
 		}
 
 		void SetRandomColor()
@@ -27,16 +39,21 @@ namespace StrangeTest.Modules.Game
 
 			if (rand < 1f)
 			{
-				spriteRenderer.color = Color1;
+				_color = Color.red;
 			}
 			else if (rand < 2f)
 			{
-				spriteRenderer.color = Color2;
+				_color = Color.green;
 			}
 			else
 			{
-				spriteRenderer.color = Color3;
+				_color = Color.blue;
 			}
+		}
+
+		void OnMouseDown()
+		{
+			HexagonSelected.Dispatch(coords);
 		}
 	}
 }

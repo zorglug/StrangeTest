@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using strange.extensions.mediation.impl;
+using strange.extensions.signal.impl;
 
 namespace StrangeTest.Modules.Game
 {
@@ -11,6 +12,8 @@ namespace StrangeTest.Modules.Game
 
 		[HideInInspector]
 		public Camera gameCamera {get; set;}
+
+		public Signal<Vector3> HexagonSelected = new Signal<Vector3>();
 
 		private List<GameObject> _hexagons;
 		private IHexGrid _grid;
@@ -56,8 +59,9 @@ namespace StrangeTest.Modules.Game
 
 					node = _grid.Nodes[y * _grid.Width + x];
 
-					node.value = hex;
+					node.view = hex;
 					hex.coords = node.Coordinates;
+					hex.HexagonSelected.AddListener(OnHexagonSelected);
 
 					_hexagons.Add(hex.gameObject);
 				}
@@ -67,6 +71,11 @@ namespace StrangeTest.Modules.Game
 			float gridHeight = hexHeight * _grid.Height + hexHeight / 2f;
 
 			gridHolder.transform.Translate(gridWidth / 2.0f * -1.0f, gridHeight / 2.0f * -1.0f + hexHeight / 2f, 0.0f);
+		}
+
+		void OnHexagonSelected(Vector3 coords)
+		{
+			HexagonSelected.Dispatch(coords);
 		}
 
 
