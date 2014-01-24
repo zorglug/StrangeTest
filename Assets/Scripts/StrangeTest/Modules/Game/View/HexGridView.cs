@@ -46,6 +46,7 @@ namespace StrangeTest.Modules.Game
 					hexHeight = hex.PixelDimensions.y / hex.pixelsPerUnit;
 
 					// :: NOTE :: These 2 lines normally depend on the grid type.
+					// The currently hardcoded setup is for a grid of type Odd-Q.
 					hOffset = hexWidth / 4.0f * x;
 					vOffset = (x & 1) * hexHeight / 2.0f;
 
