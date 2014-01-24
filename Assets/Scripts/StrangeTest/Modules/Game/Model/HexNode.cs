@@ -6,27 +6,36 @@ namespace StrangeTest.Modules.Game
 {
 	public class HexNode
 	{
-		Vector3 _coordinates;
-		Vector3 Coordinates
-		{
-			get { return _coordinates; }
-		}
+		public Vector3 Coordinates;
 
-		List<HexNode> _neighbours;
+		// Named to be orientation agnostic
+		public HexNode Neighbour1 = null;
+		public HexNode Neighbour2 = null;
+		public HexNode Neighbour3 = null;
+		public HexNode Neighbour4 = null;
+		public HexNode Neighbour5 = null;
+		public HexNode Neighbour6 = null;
+
 		List<HexNode> Neighbours
 		{
-			get { return _neighbours; }
+			get
+			{ 
+				return new List<HexNode> 
+				{
+					Neighbour1, Neighbour2, Neighbour3,
+					Neighbour4, Neighbour5, Neighbour6
+				};
+			}
 		}
 
-		public HexNode(Vector3 coordinates, List<HexNode> neighbours)
+		public HexNode()
 		{
-			if (neighbours.Count != 6)
-			{
-				throw new ArgumentException(string.Format("An HexNode can only have 6 neighbours. Received a list of neighbours with {0} entries.", neighbours.Count));
-			}
+			Coordinates = Vector3.zero;
+		}
 
-			_coordinates = coordinates;
-			_neighbours = neighbours;
+		public HexNode(Vector3 coordinates)
+		{
+			Coordinates = coordinates;
 		}
 	}
 }
